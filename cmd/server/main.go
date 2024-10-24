@@ -15,6 +15,7 @@ type HelloServiceImpl struct {
 }
 
 func (HelloServiceImpl) SayHello(ctx context.Context, r *api.HelloRequest) (*api.HelloResponse, error) {
+	fmt.Println("Received:", r)
 	return &api.HelloResponse{
 		Name:    r.Name,
 		Message: "Hello!",
